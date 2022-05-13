@@ -348,7 +348,7 @@ label .dot:hover {
 
 @media (max-width: 480px) {
   .slider {
-    width: 80vw;
+    width: 86vw;
   }
   .slider__nav {
     flex-direction: column;
