@@ -22,7 +22,7 @@ h1 {
 }
 
 .slider {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +44,7 @@ h1 {
 
 .slider__pictures {
     width: 500%;
-    height: 20rem;
+    height: 22rem;
     display: flex;
 }
 
@@ -242,3 +242,37 @@ transform: translateX(-0.187rem);
    100% {transform: translateX(-80%);
        opacity: 100%;}
 }
+
+@media (max-width: 1371px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 960px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 780px) {
+    html {
+        font-size: 11px;
+    }
+
+    .slider {
+        width: 70%;
+    }
+}
+
+/* @media (max-width: 480px) {
+   
+    .slider__texts-container {
+        order: 2;
+    }
+
+    .slider__buttons {
+        order: 1;
+    }
+} */
