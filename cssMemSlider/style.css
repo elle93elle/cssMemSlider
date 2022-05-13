@@ -15,6 +15,12 @@ body {
 color: #333;
 }
 
+h1 {
+    font-size: 4rem;
+    text-shadow: 0.15rem 0.15rem  #FFF,
+    0.25rem 0.25rem #333;
+}
+
 .slider {
   width: 40%;
   display: flex;
@@ -59,6 +65,25 @@ color: #333;
     justify-content: space-between;
 }
 
+.slider__texts-container{
+    width: 18rem;
+}
+
+.slider__texts-window {
+    overflow: hidden;
+}
+
+.slider__texts {
+    width: 500%;
+    height: 4rem;
+    display: flex;
+}
+
+.slider__text {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
 .slider__buttons {
 display: flex;
 justify-content: flex-end;
@@ -82,6 +107,10 @@ label .dot {
     transition: all 0.5s ease;
 }
 
+label .dot:hover {
+    background: #FFF;
+}
+
 #slide1:checked~.slider__nav>.slider__buttons>label[for='slide1'] .dot,
 #slide2:checked~.slider__nav>.slider__buttons>label[for='slide2'] .dot,
 #slide3:checked~.slider__nav>.slider__buttons>label[for='slide3'] .dot,
@@ -91,7 +120,6 @@ background-color: #FFF;
 box-shadow: 0.187rem 0.187rem  #333;
 transform: translateX(-0.187rem);
 }
-
 
 #slide1:checked~ .slider__frame .slider__pictures{
     animation: slide1 1.5s ease-in-out;
@@ -152,4 +180,65 @@ transform: translateX(-0.187rem);
     40% {transform: translateX(-82%);}
     60% {transform:  translateX(-78%);}
     100% {transform: translateX(-80%);}
+}
+
+#slide1:checked~ .slider__nav .slider__texts-container .slider__texts-window .slider__texts {
+    animation: text1 1s linear;
+    animation-fill-mode: both;
+}
+
+#slide2:checked~ .slider__nav .slider__texts-container .slider__texts-window .slider__texts {
+    animation: text2 1s linear;
+    animation-fill-mode: both;
+}
+
+#slide3:checked~ .slider__nav .slider__texts-container .slider__texts-window .slider__texts {
+    animation: text3 1s linear;
+    animation-fill-mode: both;
+}
+
+#slide4:checked~ .slider__nav .slider__texts-container .slider__texts-window .slider__texts {
+    animation: text4 1s linear;
+    animation-fill-mode: both;
+}
+
+#slide5:checked~ .slider__nav .slider__texts-container .slider__texts-window .slider__texts {
+    animation: text5 1s linear;
+    animation-fill-mode: both;
+}
+
+
+@keyframes text1 {
+    0% {transform: translateX(0%);
+         opacity: 0.4;}
+    100% {transform: translateX(0%);
+        opacity: 100%;}
+}
+
+@keyframes text2 {
+    0% {transform: translateX(-20%);
+        opacity: 0.4;}
+   100% {transform: translateX(-20%);
+       opacity: 100%;}
+}
+
+@keyframes text3 {
+    0% {transform: translateX(-40%);
+        opacity: 0.4;}
+   100% {transform: translateX(-40%);
+       opacity: 100%;}
+}
+
+@keyframes text4 {
+    0% {transform: translateX(-60%);
+        opacity: 0.4;}
+   100% {transform: translateX(-60%);
+       opacity: 100%;}
+}
+
+@keyframes text5 {
+    0% {transform: translateX(-80%);
+        opacity: 0.4;}
+   100% {transform: translateX(-80%);
+       opacity: 100%;}
 }
